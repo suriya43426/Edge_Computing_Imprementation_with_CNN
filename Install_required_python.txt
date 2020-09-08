@@ -1,0 +1,28 @@
+open Terminal 
+----------
+sudo apt-get update
+
+sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
+----------
+git clone https://github.com/JetsonHacksNano/installSwapfile
+./installSwapfile/installSwapfile.sh
+
+
+link https://www.jetsonhacks.com/
+
+pip3 install numpy
+
+wget http://dlib.net/files/dlib-19.17.tar.bz2 
+tar jxvf dlib-19.17.tar.bz2
+cd dlib-19.17
+
+gedit dlib/cuda/cudnn_dlibapi.cpp
+
+forward_algo = forward_best_algo;
+
+sudo python3 setup.py install
+
+
+
+https://github.com/ageitgey/face_recognition
+
