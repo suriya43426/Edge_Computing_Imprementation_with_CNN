@@ -1,10 +1,17 @@
 import cv2
 
-#cap = cv2.VideoCapture('rtsp://101.20.12.2:5050')
+face_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+
 cap = cv2.VideoCapture(0)
 
-_, frame = cap.read()
+while True:
+    _, frame = cap.read()
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = face_detector.detectMultiScale(gray, 1.3, 5)
 
-cv2.imshow('frame', frame)
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x,y), (x + w, y + h), (0, 0, 255), 2)
 
-cv2.waitKey()
+        cv2.imshow('frame', frame)
+
+        cv2.waitKey(1)
