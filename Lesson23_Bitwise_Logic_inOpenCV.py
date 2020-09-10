@@ -33,22 +33,22 @@ while True:
     ret, frame = cam.read()
 
     cv2.imshow('nanoCam',frame)     #raspberryPiCam is runing
-    cv2.moveWindow('nanoCam',0,0)   #โชว์มุมจอ ซ้ายบน
+    cv2.moveWindow('nanoCam',0,0)   #ขยับจอ ซ้ายบน
    
-    cv2.imshow('img1',img1)         #โชว์มุมจอ ซ้ายล่าง
-    cv2.moveWindow('img1',0,500)
+    cv2.imshow('img1',img1)         #โชว์ หน้าจอใหม่ชื่อ img1
+    cv2.moveWindow('img1',0,500)    #ขยับจอ ซ้ายล่าง
    
-    cv2.imshow('img2',img2)         #โชว์มุมจอ ขวาบน
-    cv2.moveWindow('img2',700,0)
+    cv2.imshow('img2',img2)         #โชว์ หน้าจอใหม่ชื่อ img2
+    cv2.moveWindow('img2',700,0)    #ขยับจอขวาบน        
 
-    cv2.imshow('AND',bitAnd)         #โชว์มุมจอ ขวาล่างแสดงการ And ของ img1, img2
-    cv2.moveWindow('AND',700,500)
+    cv2.imshow('AND',bitAnd)        #โชว์ หน้าจอใหม่ชื่อ AND
+    cv2.moveWindow('AND',700,500)   #ขยับจอ ขวาล่างแสดงการ And ของ img1, img2
 
-    cv2.imshow('OR',bitOr)         #โชว์มุมจอ ขวาบนแสดงการ Or ของ img1, img2
-    cv2.moveWindow('OR',1350,0)
+    cv2.imshow('OR',bitOr)          #โชว์ หน้าจอใหม่ชื่อ OR
+    cv2.moveWindow('OR',1350,0)     #ขยับจอ ขวาบนแสดงการ Or ของ img1, img2
 
-    cv2.imshow('XOR',bitXor)         #โชว์มุมจอ ขวาล่างแสดงการ Xor ของ img1, img2
-    cv2.moveWindow('XOR',1350,500)
+    cv2.imshow('XOR',bitXor)        #โชว์ หน้าจอใหม่ชื่อ XOR
+    cv2.moveWindow('XOR',1350,500)  #ขยับจอ ขวาล่างแสดงการ Xor ของ img1, img2
 
     frame=cv2.bitwise_and(frame,frame,mask=img1) #แสดงครึ่งจอ ขวาดำ
     #frame=cv2.bitwise_and(frame,frame,mask=img2) #แสดง ภาพสี่เหลี่ยมเล็ก นอกนนั้นดำ
