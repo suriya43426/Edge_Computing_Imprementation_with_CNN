@@ -4,7 +4,7 @@
 
 # sudo apt-get install cmake libopenblas-dev liblapack-dev libjpeg-dev
 
-# git clone https://github.com/JetsonHackNano/installSwapfile
+# git clone https://github.com/JetsonHacksNano/installSwapfile
 
 # ./installSwapfile/installSwapfile.sh
 
@@ -15,7 +15,7 @@
 
 
 
-# wget http:/dlib.net/files/dlib-19.17.tar.bz2
+# wget http://dlib.net/files/dlib-19.17.tar.bz2
 
 # tar jxvf dlib-19.17.tar.bz2
 
