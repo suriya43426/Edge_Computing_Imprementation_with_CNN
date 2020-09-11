@@ -1,7 +1,7 @@
 # in command line root repo
 # sudo apt-get update
 # sudo apt-get install cmake libopenblas-dev liblapack-dev libjpeg-dev
-# git clone https://github.com/JetsonHackNano/installSwapfile
+# git clone https://github.com/JetsonHacksNano/installSwapfile
 
 # ./installSwapfile/installSwapfile.sh
 
