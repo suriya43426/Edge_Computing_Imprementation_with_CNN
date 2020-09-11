@@ -1,16 +1,26 @@
+# goto repo pyPro folder
+# create folder faceRecognizer
+# git clone https://github.com/mcwhorpj/demoimages.git
+# inside demoimages , known , unknown for test images
+
+
 import face_recognition
 import cv2
-
 print(cv2.__version__)
-image=face_recognition.load_image_file('  ') #select Properties --> Parent Folder: copy part
 
+image=face_recognition.load_image_file('/home/evglobal/Desktop/pyPro/faceRecognizer/demoImages/unknown/u3.jpg') #select Properties --> Parent Folder: copy part
 face_recognition=face_recognition.face_locations(image)
+
 print(face_locations)       # [(440, 860, 663, 637), (192, 637, 415, 414)]
                             # (row1,col1,row2,col2)
                             # openCV blue, green ,red  
                             # to convert RGB
+
 image=cv2.cvtColor(image,cv2.COLOR_RGB2BGR)
+
+for (row1,col1,row2,col2)in face_Locations:
     cv2.rectangle(image,(col1,row1),(col2,row2),(0,0,255),2)
+
 cv2.imshow('myWindow', image)
 cv2.moveWindow('myWindow',0,0)
 
