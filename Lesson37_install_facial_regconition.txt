@@ -1,0 +1,53 @@
+install jetpack 4.4
+
+step_1 sudo apt-get update
+
+step_2 cd Downloads >> sudo apt-get install curl , waiting for Processing triggers for man-db(2.8.3 ubatu)
+
+#going to Lesson8_ Installing_a_Good_Python_IDE_Environment,VS_code
+
+step_3 Downloads >> curl -L https://github.com/toolboc/vscode/releases/download/1.32.3/code-oss_1.32.3-arm64.deb -o code-oss_1.32.3-arm64.deb
+
+step_4 Downloads >> sudo dpkg -i code-oss_1.32.3-arm64.deb
+
+
+step_5 in vs_code install python Extension, test.py and print("Hello World") in my Terninal
+
+install Extension Linter 
+
+how you learning for website https:// google .com "keyword : jetson nano install learning framework"
+
+install tensorflow and come down , https://docs.nvidia.com/deeplearning/frameworks/install-tf-jetson-platform/index.html
+
+Jetson Nano
+NVIDIA Jetson Nano is a small, powerful computer for embedded AI systems and IoT that delivers the power of modern AI in a low-power platform. The Jetson Nano is targeted to get started fast with the NVIDIA Jetpack SDK and a full desktop Linux environment, and start exploring a new world of embedded products.
+
+    - Prerequisites
+        install Jetpack 
+
+        @root
+        install system packages required by Tensorflow:
+            $ sudo apt-get update
+            $ sudo apt-get install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran
+        install and upgrade pip3
+            $ sudo apt-get install pyhon3-pip3
+            $ sudo pip3 install -U pip testresources setuptools
+        install the python packages depedencies.
+            $ sudo pip3 install -U numpy==1.16.1 future==0.18.2 mock==3.0.5 h5py==2.10.0 keras_preprocessing==1.1.1 keras_applications==1.0.8 gast==0.2.2 futures protobuf pybind11
+  
+        before Install test my python and Library
+            $ python3 (in root directory)
+            import cv2
+            cv2.__version__
+            import cv2
+            numpy.__version__
+
+        New Add 
+            $ sudo pip3 install adafruit-circuitpython-servokit
+
+    - Install Tensorflow
+        install Tensorflow using pip3 command:
+            $ sudo pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v44 tensorflow
+
+    - Verifying Install
+
