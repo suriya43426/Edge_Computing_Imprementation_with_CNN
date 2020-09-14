@@ -5,7 +5,7 @@ import cv2
 import os
 import pickle
 
-print(cv2.__version__)
+print(cv2.__version__) 
  
 j=0
  
