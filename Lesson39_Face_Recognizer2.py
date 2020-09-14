@@ -8,6 +8,9 @@ donEncode=face_recognition.face_encodings(donFace)[0]
 nancyFace=face_recognition.load_image_file('/home/evglobal/Destop/pyPro/faceRecognizer/known/Nancy Pelosi.jpg')
 ืnancyEncode=face_recognition.face_encodings(nancyFace)[0]
 
+penceFace=face_recognition.load_image_file('/home/evglobal/Destop/pyPro/faceRecognizer/known/Mike Pence.jpg')
+ืpenceEncode=face_recognition.face_encodings(nancyFace)[0]
+
 Encodings=[donEncode,nancyEncode]
 Names=['The Donald','Nance Pelosi']
 
@@ -18,7 +21,7 @@ allEncodings=face_recognition.face_encodings(testImage, facePositions)
 
 testImage=cv2.cvtColor(testImage,cv2.COLOR_RGB2BGR)
 
-for (top,right,bottom,left), face_encodings in zip(testImage)
+for (top,right,bottom,left), face_encodings in zip(facePositions,allEncodings)
     name='Unknown Person'
     matches=face_recognition.compare_faces(Encodings,face_encodings)
     
