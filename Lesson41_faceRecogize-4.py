@@ -1,6 +1,10 @@
+# save model not replace
+
 import face_recognition
 import cv2
 import os
+import pickle
+
 print(cv2.__version__)
  
 Encodings=[]
@@ -20,6 +24,17 @@ for root, dirs, files in os.walk(image_dir):
         Encodings.append(encoding)
         Names.append(name)
 print(Names)
+
+### add
+
+with open('train.pkl','wb') as f:
+    pickle.dump(Names,f)
+    pickle.dump(Encodings,f)
+Encodings=[]
+Names=[]
+with open('train.pkl','rb') as f:
+    Names=pickle.load(f)
+    Encodings=pickle.load(f)
 
 for root,dirs, files in os.walk(image_dir):
     for file in files:
