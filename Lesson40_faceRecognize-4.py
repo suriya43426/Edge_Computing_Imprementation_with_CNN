@@ -7,9 +7,9 @@ Encodings=[]
 Names=[]
 j=0
  
-image_dir='/home/pjm/Desktop/pyPro/faceRecognizer/demoImages/known'
+image_dir='/home/evglobal/Desktop/pyPro/faceRecognizer/demoImages/known'
 for root, dirs, files in os.walk(image_dir):
-    print(files)
+    print(files)                # โปรแกรมจะตรวจสอบภาพใน Folder และนำชื่อมาใส่ใน Array
     for file in files:
         path=os.path.join(root,file)
         print(path)
@@ -20,10 +20,7 @@ for root, dirs, files in os.walk(image_dir):
         Encodings.append(encoding)
         Names.append(name)
 print(Names)
- 
-font=cv2.FONT_HERSHEY_SIMPLEX
- 
-image_dir='/home/pjm/Desktop/pyPro/faceRecognizer/demoImages/unknown'
+
 for root,dirs, files in os.walk(image_dir):
     for file in files:
         print(root)
@@ -37,12 +34,16 @@ for root,dirs, files in os.walk(image_dir):
         for (top,right,bottom,left),face_encoding in zip(facePositions,allEncodings):
             name='Unknown Person'
             matches=face_recognition.compare_faces(Encodings,face_encoding)
+            
             if True in matches:
                 first_match_index=matches.index(True)
                 name=Names[first_match_index]
+
             cv2.rectangle(testImage,(left,top),(right,bottom),(0,0,255),2)
             cv2.putText(testImage,name,(left,top-6),font,.75,(0,255,255),2)
+
         cv2.imshow('Picture', testImage)
         cv2.moveWindow('Picture',0,0)
+
         if cv2.waitKey(0)==ord('q'):
             cv2.destroyAllWindows()
