@@ -26,3 +26,7 @@ sudo python3 setup.py install
 
 https://github.com/ageitgey/face_recognition
 
+Project
+https://developer.nvidia.com/embedded/community/jetson-projects
+
+
