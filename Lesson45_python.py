@@ -2,6 +2,13 @@
 #Classes
 #Methods and Threading
 
+#Oject-oriented programming has some advantages over other design patterns.
+#Development is fasterr and cheaper, with better software maintainability.
+#This in turn, leads to higher-quality software, which is also extensible with new methods and attributes.
+#The concept may be too complex for beginners.
+#Computationally, OOP software is slower, and use more memory since more lines of code have to be written.
+
+
 l1=3
 w1=5
 area1=l1*w1
