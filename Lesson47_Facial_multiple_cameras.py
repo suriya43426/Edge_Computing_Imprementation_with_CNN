@@ -2,6 +2,12 @@ from threading import Thread
 import cv2
 import time
 import numpy as np
+import face_recognition
+import pickle
+
+with open('train.pkl','rb') as f:
+    Names=pickle.load(f)
+    Encodings=pickle.load(f)
  
 class vStream:
     def __init__(self,src,width,height):
@@ -31,12 +37,15 @@ cam2=vStream(camSet,dispW,dispH)
 font=cv2.FONT_HERSHEY_SIMPLEX
 startTime=time.time()
 dtav=0
+scaleFactor=.3
 
 while True:
     try:
         myFrame1=cam1.getFrame()
         myFrame2=cam2.getFrame()
         myFrame3=np.hstack((myFrame1,myFrame2))
+        frameRGB=cv2.cvtColor(myFrame3,cv2.COLOR_BGR2RGB)
+        frameRGBsmall=cv2.resize(frameRGB,(0,0),fx=scaleFactor,fy=scaleFactor)
         dt=time.time()-startTime
         startTime=time.time()
         dtav=.9*dtav+.1*dt
