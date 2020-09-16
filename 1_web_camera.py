@@ -11,7 +11,7 @@ flip=2
  
 #Or, if you have a WEB cam, uncomment the next line
 #(If it does not work, try setting to '1' instead of '0')
-#cam=cv2.VideoCapture(0)
+cam=cv2.VideoCapture(0)
 
 while True:
     ret, frame = cam.read()

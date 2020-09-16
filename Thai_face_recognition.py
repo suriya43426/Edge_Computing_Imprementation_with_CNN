@@ -5,7 +5,7 @@ import cv2
 #ORIGINAL_CODE_CREDIT:  https://github.com/ageitgey/face_recognition/blob/master/examples/facerec_from_webcam_faster.py
 
 #ดึงวิดีโอตัวอย่างเข้ามา, ถ้าต้องการใช้webcamให้ใส่เป็น0
-video_capture = cv2.VideoCapture("sample.mp4") 
+video_capture = cv2.VideoCapture(0) 
 
 #ใบหน้าคนที่ต้องการรู้จำเป็นreference #คนที่1
 pop_image = face.load_image_file("pop.jpg")
